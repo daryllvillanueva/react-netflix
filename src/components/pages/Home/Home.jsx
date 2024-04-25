@@ -7,8 +7,10 @@ import { FaPlus, FaTimes } from 'react-icons/fa';
 import Accordion from './Accordion';
 import FormSubscribe from './FormSubscribe';
 import Footer from '../../partials/Footer';
+import { TabTitle } from '../../helpers/GeneralFunctions';
 
 const Home = () => {
+    TabTitle('Home - Netflix');
   return (
     <>
         <div className='login bg-[url("../../img/bg-login.jpg")] h-[70vh] w-full bg-cover isolate relative'>

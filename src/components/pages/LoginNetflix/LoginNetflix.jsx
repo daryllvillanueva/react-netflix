@@ -2,9 +2,14 @@ import React from 'react'
 import Header from '../../partials/Header'
 import { Link, useNavigate } from 'react-router-dom'
 import { LiaEyeSolid, LiaEyeSlashSolid } from "react-icons/lia";
+import { TabTitle } from '../../helpers/GeneralFunctions';
+import Footer from '../../partials/Footer';
 
 
 const LoginNetflix = () => {
+
+    TabTitle('Login - Netflix');
+
     const navigate = useNavigate(); // hook from Router Dom
     const [hasValue, setHasValue] = React.useState(false);
     const [showPassword, setShowPassword] = React.useState(false);
@@ -72,6 +77,11 @@ const LoginNetflix = () => {
 
                     <p className='text-sm text-white/50'>This page is protected by Google reCAPTCHA to ensure you're not a bot. <Link className='text-blue-600 hover:underline'>Learn more.</Link></p>
                 </form>
+            </div>
+        </div>
+        <div className='absolute bottom-0 w-full'>
+            <div className='backdrop w-full absolute bg-black/70 z-[999]'>
+                <Footer />
             </div>
         </div>
     </div>
