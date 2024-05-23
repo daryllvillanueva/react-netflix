@@ -12,6 +12,9 @@ const Movie = () => {
     const[showMovieInfo, setMovieInfo] = React.useState(false);
     const[movieData, setMovieData] = React.useState(null);
     const handlShowMovieInfo = () => setMovieInfo(true);
+
+    const [search, setSearch] = React.useState(false)
+    const handleShowSearch = () => setSearch(true);
   return (
     <>
         <div className='bg-[#141414] text-white'>
@@ -34,7 +37,7 @@ const Movie = () => {
                         </div>
                         <div>
                             <ul className='flex items-center gap-5 text-white'>
-                                <li><button><FiSearch className='text-xl'/></button></li>
+                                <li><button onClick={handleShowSearch}><FiSearch className='text-xl'/></button></li>
                                 <li><button><FiBell className='text-xl'/></button></li>
                                 <li className='flex items-center gap-1'>
                                     <button><img src="https://via.placeholder.com/50x50" alt="" className='rounded-md'/></button>
@@ -62,7 +65,7 @@ const Movie = () => {
         </div>
         {showMovieInfo && <ModalMovieinfo setMovieInfo={setMovieInfo} movieData={movieData}/> }
 
-        
+        {search && <ModalSearch setSearch={setSearch}/>}
         
     </>
   )

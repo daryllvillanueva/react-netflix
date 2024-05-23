@@ -154,6 +154,8 @@ export const movies = [
         duration: "3hr 45m",
         grouping: "trending",
     },
+    
+    // top 10 
 
     
 ]
